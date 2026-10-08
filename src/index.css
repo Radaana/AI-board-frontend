@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+/* Static also exports tokens consumed by Ant Design rather than utility classes. */
+@theme static {
+    --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+    --color-brand: #87ea51;
+    --color-brand-lime: #d0ff35;
+    --color-on-brand: #101010;
+    --color-content: #273027;
+    --color-content-dark: #e8ece6;
+    --color-muted: #626c60;
+    --color-muted-dark: #a3ada0;
+    --color-surface: #ffffff;
+    --color-surface-dark: #191b18;
+    --color-sidebar: #f5f7f4;
+    --color-sidebar-dark: #121411;
+    --color-line: #e0e6dd;
+    --color-line-dark: #30362d;
+    --color-hover: #e9eee6;
+    --color-hover-dark: #23281f;
+    --color-accent: #2b6416;
+}
+
+@layer base {
+    body {
+        @apply min-w-80 bg-surface font-sans text-base text-content antialiased scheme-light-dark dark:bg-surface-dark dark:text-content-dark;
+    }
+}
